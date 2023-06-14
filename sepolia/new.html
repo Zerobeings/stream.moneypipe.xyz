@@ -5,7 +5,7 @@
 <meta name="twitter:title" content="moneypipe stream" />
 <meta name="twitter:description" content="Create a group that splits incoming money to members in realtime" />
 <meta name="twitter:image" content="https://stream.moneypipe.xyz/stream_poster.png" />
-<meta property="og:url" content="https://stream.moneypipe.xyz/rinkeby" />
+<meta property="og:url" content="https://stream.moneypipe.xyz/sepolia" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="moneypipe stream" />
 <meta property="og:description" content="Create a group that splits incoming money to members in realtime" />
@@ -32,7 +32,7 @@ var CONTRACT_ADDRESS = location.hash.slice(1).split("=")[1]
 var template = Handlebars.compile(document.querySelector("#template").innerHTML)
 var stream = new Moneypipe.stream({
   web3: new Web3(window.ethereum),
-  network: "rinkeby"
+  network: "sepolia"
 })
 var chart;
 var members = []
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 <body>
 <nav>
   <div class='brand'>
-    <a href="https://moneypipe.xyz">moneypipe</a><span class='separator'>.</span><a href="/">stream</a><span class='separator'>.</span><a href=".">rinkeby</a>
+    <a href="https://moneypipe.xyz">moneypipe</a><span class='separator'>.</span><a href="/">stream</a><span class='separator'>.</span><a href=".">sepolia</a>
   </div>
   <div class='subtitle'>create a group that splits incoming money to members in realtime</div>
   <div>

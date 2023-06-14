@@ -5,7 +5,7 @@
 <meta name="twitter:title" content="moneypipe stream" />
 <meta name="twitter:description" content="Create a group that splits incoming money to members in realtime" />
 <meta name="twitter:image" content="https://stream.moneypipe.xyz/stream_poster.png" />
-<meta property="og:url" content="https://stream.moneypipe.xyz/rinkeby" />
+<meta property="og:url" content="https://stream.moneypipe.xyz/sepolia" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="moneypipe stream" />
 <meta property="og:description" content="Create a group that splits incoming money to members in realtime" />
@@ -33,7 +33,7 @@ location.hash.slice(1).split("&").forEach((token) => {
 var web3 = new Web3(window.ethereum);
 var stream = new Moneypipe.stream({
   web3: new Web3(window.ethereum),
-  network: "rinkeby"
+  network: "sepolia"
 })
 var template = Handlebars.compile(document.querySelector("#template").innerHTML)
 var chart;
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   await ethereum.request({ method: 'eth_requestAccounts' })
   let accounts = await web3.eth.getAccounts()
-  let etherscan = "https://rinkeby.etherscan.io/address/"
+  let etherscan = "https://sepolia.etherscan.io/address/"
   document.querySelector("#title").textContent = s.title;
   document.querySelector("#addr").innerHTML = `Group address: <a target="_blank" href="${etherscan}${Params.address}#internaltx">${Params.address}</a><br><br>Send ETH to this group to auto-distribute funds to the members:`
   document.querySelector("#address").textContent = "ethereum:" + Params.address
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 <body>
 <nav>
   <div class='brand'>
-    <a href="https://moneypipe.xyz">moneypipe</a><span class='separator'>.</span><a href="/">stream</a><span class='separator'>.</span><a href=".">rinkeby</a>
+    <a href="https://moneypipe.xyz">moneypipe</a><span class='separator'>.</span><a href="/">stream</a><span class='separator'>.</span><a href=".">sepolia</a>
   </div>
   <div class='subtitle'>create a group that splits incoming money to members in realtime</div>
   <div>
