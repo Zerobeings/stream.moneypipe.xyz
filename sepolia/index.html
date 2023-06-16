@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     let groups = await stream.groups()
     document.querySelector(".items").innerHTML = groups.map((group) => {
-      return `<a href="sepolia.html/group#address=${group.group}">${group.title}</a>`
+      return `<a href="sepolia/group.html#address=${group.group}">${group.title}</a>`
     }).join("")
   } catch (e) {
     alert(e.message)
