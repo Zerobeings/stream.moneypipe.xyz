@@ -5,7 +5,7 @@
 <meta name="twitter:title" content="moneypipe stream" />
 <meta name="twitter:description" content="Create a group that splits incoming money to members in realtime" />
 <meta name="twitter:image" content="https://stream.moneypipe.xyz/stream_poster.png" />
-<meta property="og:url" content="https://stream.moneypipe.xyz/sepolia" />
+<meta property="og:url" content="https://stream-moneypipe-xyz.vercel.app/sepolia" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="moneypipe stream" />
 <meta property="og:description" content="Create a group that splits incoming money to members in realtime" />
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     let groups = await stream.groups()
     document.querySelector(".items").innerHTML = groups.map((group) => {
-      return `<a href="group#address=${group.group}">${group.title}</a>`
+      return `<a href="sepolia/group#address=${group.group}">${group.title}</a>`
     }).join("")
   } catch (e) {
     alert(e.message)
